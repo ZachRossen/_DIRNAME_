@@ -1,49 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My First Website</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link id="theme" rel="stylesheet" type="text/css" href="default.css">
+	<title>Change CSS on Button Click</title>
+	<link id="theme" rel="stylesheet" href="default.css">
 </head>
 <body>
-
+	<h1>Change CSS on Button Click</h1>
 	<p>Click the buttons below to change the theme:</p>
 	<button onclick="setTheme('default')">Default</button>
 	<button onclick="setTheme('dark')">Dark</button>
 	<button onclick="setTheme('light')">Light</button>
-	<script src="script.js"></script>
 
-	<header>
-		<h1>My First Website</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<main>
-		<section>
-			<h2>About Me</h2>
-			<p>Hello, my name is Zach Rossen and I'm a computer science student. </p>
-		</section>
-		
-		<section>
-			<h2>My Projects</h2>
-			<ul>
-				<li><a href="#">Project 1</a></li>
-				<li><a href="#">Project 2</a></li>
-				<li><a href="#">Project 3</a></li>
-			</ul>
-		</section>
-	</main>
-	
-	<footer>
-		<p>&copy; 2023 Zach Rossen. All rights reserved.</p>
-	</footer>
+	<script>
+		function setTheme(theme) {
+			var cssFile = document.getElementById('theme');
+			cssFile.href = theme + '.css';
+		}
+	</script>
 </body>
 </html>
